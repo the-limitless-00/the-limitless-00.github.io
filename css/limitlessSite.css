@@ -9,28 +9,36 @@ html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#topBar {
-    width: 100vw;
-    height: 5vh;
+#menuBar {
+    display: flex;
     border-bottom: 2px solid #4e4e4e;
     background-color: rgb(37, 37, 37);
-    position: fixed;
+    width: 100vw;
+    height: 10vh;
     margin: 0px 0px 0px 0px;
     z-index: 2;
     top: 0;
+    position: fixed;
+}
+
+#topBar {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #limitlessLinks {
-    height: 5vh;
-    width: 5vh;
+    aspect-ratio: 16 / 9;
+    height: 10vh;
     position: absolute;
-    margin: 0px 0px 0px calc(100vw - 5vh);
+    clip-path: inset(3vh 0px 3vh 0px);
 }
 #limitlessLinks {
     transition: 0.1s;
 }
 #limitlessLinks:hover {
-    height: 4vh;
-    width: 4vh;
-    margin: .5vh .5vh 0px calc(100vw - 4.5vh);
+    height: 9.5vh;
+    cursor: pointer;
 }
