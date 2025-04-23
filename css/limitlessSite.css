@@ -9,6 +9,11 @@ html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+a {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
 #menuBar {
     display: flex;
     border-bottom: 2px solid #3d3d3d;
@@ -42,6 +47,11 @@ html {
 .categoryLink {
     font-size: x-large;
 }
+@media screen and (max-width: 600px) {
+    .categoryLink {
+        font-size: medium;
+    }
+}
 
 #limitlessLinks {
     height: 10vh;
@@ -52,6 +62,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     transform-origin: center;
+    clip-path: inset(3vh 0px 3vh 0px);
 }
 #limitlessLinks:hover {
     height: 9.5vh;
@@ -68,6 +79,29 @@ html {
     border-radius: 1vh;
     transition: .5s;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    pointer-events: none;
+    font-size: 20pt;
+}
+@media screen and (max-width: 600px) {
+    #linkMenuBox {
+        font-size: 12pt
+    }
+}
+#linkBoxes {
+    height: 75vh;
+    width: 75vw;
+    opacity: 0%;
+    transition: .5s;
+    transition-delay: .5s;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: space-evenly;
 }
 
 #contentBlocker {
@@ -79,6 +113,21 @@ html {
     left: 0px;
     position: absolute;
     transition: .5s;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     opacity: 0%;
+    transition-delay: 0s;
+    pointer-events: none;
+}
+
+.linkBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.linkLogo {
+    height: 2vh;
+    width: auto;
+    margin-right: 5px;
 }
